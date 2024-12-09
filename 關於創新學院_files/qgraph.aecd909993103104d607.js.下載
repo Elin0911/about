@@ -1,0 +1,65 @@
+window.QGSettings = {
+   "appId": "aecd909993103104d607",
+   "debug": false,
+   "personalizationEnabled": true,
+   "enableGoogleTopics": true,
+   "vapidPublicKey": "BO3TFOjF8H6xayvfV_d4KLYSDzbjg8HcMkOni64UVYJ0pFDYV3yF2JzV12kfYgKY0zgPTNHq9SzRDdkxLDLJOcI",
+   "qgendpoint": "https://.aiqua.io/notify.html",
+   "origin": "https://www.leadercampus.com.tw",
+   "inWebEnabled": true,
+   "cookieServer": {
+      "enabled": true,
+      "endpoint": "https://appier.leadercampus.com.tw"
+   },
+   "push": {
+      "delay": 0,
+      "requestSelf": false,
+      "fakePrompt": true,
+      "secondsBetweenPrompts": 3600,
+      "restrictOrigin": false,
+      "useNotifyEndpoint": false,
+      "allowedPushDomains": null,
+      "prompt": {
+         "buttonColor": "#d0021b",
+         "isMiddle": false,
+         "laterText": "\u6211\u518d\u60f3\u60f3",
+         "message": "\u958b\u555f\u63a8\u64ad\u901a\u77e5\uff0c\u8b93\u5b78\u7fd2\u6a5f\u6703\u4e3b\u52d5\u627e\u4e0a\u9580\uff01",
+         "overlay": true,
+         "subscribeText": "\u597d\uff01",
+         "title": "\u5225\u932f\u904e\u4efb\u4f55\u7cbe\u5f69\u8ab2\u7a0b"
+      },
+      "optInTip": {
+         "title": "Stay tuned to the latest Offers and News",
+         "message": "Turn on notifications with these simple steps:\n 1. Click the icon on the address bar as shown in the example above.\n 2. Allow notifications.",
+         "bgColor": "#FFFFFF",
+         "textColor": "#000000",
+         "location": "right",
+         "overlay": true
+      },
+      "onSubscribedPopup": {
+         "enabled": false,
+         "htmlBody": "",
+         "showOverlay": true
+      },
+      "optInTipEnabled": false
+   }
+};
+if(window.qg && window.qg.queue) {
+    window.qg.queue.unshift(('init', QGSettings));
+}
+!function(q,g,r,a,p,h,js){
+    if(!q.qg){
+        js=q.qg=function() {
+            js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+            js.queue = [];
+        }
+    }
+    if(q.qg.initialized){return;}
+    window.qg.queue.unshift(['init',window.QGSettings])
+    p=g.createElement(r);
+    p.async=!0;
+    p.src=a;
+    h=g.getElementsByTagName(r)[0];
+    h.parentNode.insertBefore(p,h);
+    q.qg.initialized = true;
+}(window,document,'script','//cdn.qgraph.io/v3/r/aiqua.js');
