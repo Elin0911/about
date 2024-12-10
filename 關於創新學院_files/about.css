@@ -1054,14 +1054,17 @@
   
     .text-section h1 {
         text-align: left;
+        font-size:36px;
     }
   
     .text-section h2 {
         text-align: left;
+        font-size:24px;
     }
   
     .text-section p {
         text-align: left;
+        font-size:16px;
     }
   
     .cta-button {
@@ -1089,14 +1092,17 @@
   
     .text-section h1 {
         text-align: left;
+        font-size: 36px; 
     }
   
     .text-section h2 {
         text-align: left;
+        font-size: 24px;
     }
   
     .text-section p {
         text-align: left;
+        font-size:16px;
     }
   
   }
@@ -1158,6 +1164,66 @@
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* 手機和平板自適應樣式 */
+@media (max-width: 768px) {
+  .statistics-container {
+      flex-direction: column; /* 垂直排列 */
+      gap: 20px; /* 減少間距 */
+  }
+
+  .stat-box {
+      width: 100%; /* 占滿可用寬度 */
+      max-width: 100%; /* 移除寬度限制 */
+  }
+
+  .statistics-section h1 {
+      font-size: 36px; /* 減小標題字體大小 */
+  }
+
+  .statistics-section h2 {
+      font-size: 24px; /* 減小副標題字體大小 */
+      text-align: left;
+  }
+
+  .stat-box .highlight {
+      font-size: 60px; /* 縮小數字大小 */
+  }
+
+  .stat-box p {
+      font-size: 16px; /* 調整段落文字大小 */
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics-section {
+      padding: 20px; /* 減小邊距 */
+      align-items: center;
+      max-width:100%;
+      text-align:center;
+  }
+
+  .statistics-section h1 {
+      font-size: 28px; /* 進一步縮小標題字體大小 */
+      text-align: left;
+  }
+
+  .statistics-section h2 {
+      font-size: 20px; /* 進一步縮小副標題字體大小 */
+      text-align: left;
+  }
+
+  .stat-box .highlight {
+      font-size: 50px; /* 再次縮小數字大小 */
+  }
+
+  .stat-box p {
+      font-size: 14px; /* 再次調整段落文字大小 */
+      text-align: left;
+  }
+}
+
+
 
 /* 四大學習領域區塊樣式 */
 .learning-fields {
@@ -1224,6 +1290,55 @@
     transform: rotateY(180deg);
 }
 
+/* 手機和平板自適應樣式 */
+@media (max-width: 768px) {
+  .learning-fields {
+      padding: 0 10px 20px 10px; /* 減少邊距 */
+  }
+
+  .learning-fields h1 {
+      font-size: 36px; /* 縮小標題字體 */
+  }
+
+  .learning-fields h2 {
+      font-size: 24px; /* 縮小副標題字體 */
+  }
+
+  .fields-container {
+      gap: 10px; /* 減少卡片間距 */
+  }
+
+}
+
+@media (max-width: 480px) {
+  .learning-fields {
+      padding: 20px; /* 減小邊距 */
+      align-items: center;
+      max-width:100%;
+      text-align:center;
+  }
+
+  .learning-fields h1 {
+      font-size: 28px; /* 再次縮小標題字體 */
+      text-align: left;
+  }
+
+  .learning-fields h2 {
+      font-size: 20px; /* 再次縮小副標題字體 */
+      text-align: left;
+  }
+
+  .fields-container {
+      gap: 5px; /* 縮小卡片間距 */
+  }
+
+  .field-card {
+      width: 100%; /* 全螢幕寬度 */
+  }
+}
+
+
+
 /* 向頂尖學習區塊樣式 */
 .top-learning-section {
     text-align: center;
@@ -1274,6 +1389,67 @@
     width: 50%;  /* 每行包含兩張圖片，各佔50%寬度 */
     height: auto;
 }
+
+/* 手機和平板自適應樣式 */
+@media (max-width: 768px) {
+  .top-learning-section {
+      padding: 20px 10px; /* 減少邊距 */
+  }
+
+  .top-learning-section h1 {
+      font-size: 36px; /* 縮小標題字體大小 */
+  }
+
+  .top-learning-section h2 {
+      font-size: 24px; /* 縮小副標題字體大小 */
+  }
+
+  .top-learning-images {
+      gap: 20px; /* 減少行間距 */
+  }
+
+  .learning-row {
+      flex-direction: column; /* 垂直排列圖片 */
+      gap: 20px; /* 圖片間距 */
+  }
+
+  .learning-image {
+      width: 100%; /* 圖片寬度改為全寬 */
+  }
+}
+
+@media (max-width: 480px) {
+  .top-learning-section {
+    padding: 20px; /* 減小邊距 */
+    align-items: center;
+    max-width:100%;
+    text-align:center;
+  }
+
+  .top-learning-section h1 {
+      font-size: 28px; /* 再次縮小標題字體大小 */
+      text-align: left;
+  }
+
+  .top-learning-section h2 {
+      font-size: 20px; /* 再次縮小副標題字體大小 */
+      text-align: left;
+  }
+
+  .top-learning-images {
+      gap: 10px; /* 縮小行間距 */
+  }
+
+  .learning-row {
+      flex-direction: column; /* 確保圖片垂直排列 */
+      gap: 10px; /* 縮小圖片間距 */
+  }
+
+  .learning-image {
+      width: 100%; /* 確保圖片占滿寬度 */
+  }
+}
+
 
 /* Thinkers 50 大師區塊樣式 */
 .thinkers-section {
@@ -1352,6 +1528,81 @@
     align-items: stretch; /* 讓所有卡片的高度一致 */
 }
 
+/* 手機和平板自適應樣式 */
+@media (max-width: 768px) {
+  .thinkers-section {
+      padding: 20px 10px; /* 減少邊距 */
+  }
+
+  .thinkers-section h1 {
+      font-size: 36px; /* 縮小標題字體 */
+  }
+
+  .thinkers-section h2 {
+      font-size: 24px; /* 縮小副標題字體 */
+  }
+
+  .thinkers-section p {
+      font-size: 16px; /* 縮小段落文字字體 */
+      line-height: 1.6; /* 調整行距 */
+      max-width: 100%; /* 放寬文字寬度限制 */
+      margin: 0 10px 20px; /* 減少段落間距 */
+      text-align: left;
+  }
+
+  .thinkers-images {
+      gap: 15px; /* 減少行間距 */
+  }
+
+  .thinkers-row {
+      flex-wrap: wrap; /* 讓圖片自動換行 */
+      justify-content: center; /* 圖片水平居中 */
+      gap: 10px; /* 減少圖片間距 */
+  }
+
+  .thinker-image {
+      width: 18%; /* 每行顯示兩張圖片 */
+      height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .thinkers-section {
+      padding: 20px; /* 減小邊距 */
+      align-items: center;
+      max-width:100%;
+      text-align:center;
+  }
+
+  .thinkers-section h1 {
+      font-size: 28px; /* 再次縮小標題字體 */
+      text-align: left;
+  }
+
+  .thinkers-section h2 {
+      font-size: 20px; /* 再次縮小副標題字體 */
+      text-align: left;
+  }
+
+  .thinkers-section p {
+      font-size: 14px; /* 再次縮小段落文字字體 */
+      line-height: 1.5; /* 調整行距 */
+      margin: 0 5px 10px; /* 進一步減少段落間距 */
+      text-align: left;
+  }
+
+  .thinkers-row {
+      flex-wrap: wrap; /* 確保圖片換行排列 */
+      justify-content: center; /* 圖片水平居中 */
+      gap: 5px; /* 縮小圖片間距 */
+  }
+
+  .thinker-image {
+      width: 18%; /* 每行顯示一張圖片 */
+      height:auto;
+  }
+}
+
 
 
 /* 企業肯定區塊樣式 */
@@ -1374,6 +1625,47 @@
     color: #FF622B;
     font-weight: bold; /* 設定粗體 */
 }
+
+/* 手機和平板自適應樣式 */
+@media (max-width: 768px) {
+  .enterprise-recognition-section {
+      padding: 20px 10px; /* 減少內邊距，適應較小螢幕 */
+  }
+
+  .enterprise-recognition-section h1 {
+      font-size: 36px; /* 縮小標題字體 */
+      margin-bottom: 10px;
+  }
+
+  .enterprise-recognition-section h2 {
+      font-size: 24px; /* 縮小副標題字體 */
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enterprise-recognition-section {
+    padding: 20px; /* 減小邊距 */
+    align-items: center;
+    max-width:100%;
+    text-align:center;
+  }
+
+  .enterprise-recognition-section h1 {
+      font-size: 28px; /* 再次縮小標題字體 */
+      margin-bottom: 8px;
+      text-align:left;
+  }
+
+  .enterprise-recognition-section h2 {
+      font-size: 20px; /* 再次縮小副標題字體 */
+      margin-bottom: 10px;
+      text-align:left;
+  }
+}
+
+
+
 
 /* 跑馬燈效果容器 */
 .enterprise-recognition-marquee {
